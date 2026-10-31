@@ -1,0 +1,104 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261030234531
+Nombre de usuario: XXX\vieja
+Usuario RunAs: XXX\vieja
+Nombre de la configuración: 
+Máquina: XXX (Microsoft Windows NT 10.0.26300.0)
+Aplicación host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 11040
+PSVersion: 5.1.26100.9711
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9711
+BuildVersion: 10.0.26100.9711
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\vieja\Desktop\auditoria_completa.txt
+PS C:\WINDOWS\system32> cd $HOME\Desktop 
+PS C:\Users\vieja\Desktop> mkdir Sistema_Ventas 
+
+
+    Directorio: C:\Users\vieja\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        30/10/2026     23:45                Sistema_Ventas
+
+
+PS C:\Users\vieja\Desktop> cd Sistema_Ventas 
+PS C:\Users\vieja\Desktop\Sistema_Ventas> mkdir Frontend, Backend, BaseDatos 
+
+
+    Directorio: C:\Users\vieja\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        30/10/2026     23:45                Frontend
+d-----        30/10/2026     23:45                Backend
+d-----        30/10/2026     23:45                BaseDatos
+
+
+PS C:\Users\vieja\Desktop\Sistema_Ventas> echo "Version 1.0 del Sistema de Ventas" > README.md 
+PS C:\Users\vieja\Desktop\Sistema_Ventas> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Version 1.0 del Sistema de Ventas"
+PS C:\Users\vieja\Desktop\Sistema_Ventas> git init 
+Initialized empty Git repository in C:/Users/vieja/Desktop/Sistema_Ventas/.git/
+PS C:\Users\vieja\Desktop\Sistema_Ventas> git add . 
+
+PS C:\Users\vieja\Desktop\Sistema_Ventas> git commit -m "Día 1: Despliegue de la estructura base" 
+[master (root-commit) 20568d4] Día 1: Despliegue de la estructura base
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+PS C:\Users\vieja\Desktop\Sistema_Ventas> git branch -M main
+
+PS C:\Users\vieja\Desktop\Sistema_Ventas> git remote add origin https://github.com/MendietaSergio/Sistema-Ventas.git
+
+PS C:\Users\vieja\Desktop\Sistema_Ventas> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 99.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MendietaSergio/Sistema-Ventas.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\vieja\Desktop\Sistema_Ventas> echo "Conectando al servidor SQL..." > BaseDatos\conexion.ps1
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Conectando al servidor SQL..."
+PS C:\Users\vieja\Desktop\Sistema_Ventas> echo "Actualizacion Dia 2: Modulo DB agregado" >> README.md 
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Actualizacion Dia 2: Modulo DB agregado"
+PS C:\Users\vieja\Desktop\Sistema_Ventas> mkdir Pruebas_Unitarias 
+
+
+    Directorio: C:\Users\vieja\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        30/10/2026     23:53                Pruebas_Unitarias
+
+
+PS C:\Users\vieja\Desktop\Sistema_Ventas> git add . 
+
+PS C:\Users\vieja\Desktop\Sistema_Ventas> git commit -m "Día 2: Agregados scripts de DB y carpeta de pruebas" 
+[main e31483f] Día 2: Agregados scripts de DB y carpeta de pruebas
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 BaseDatos/conexion.ps1
+PS C:\Users\vieja\Desktop\Sistema_Ventas> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 539 bytes | 107.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MendietaSergio/Sistema-Ventas.git
+   20568d4..e31483f  main -> main
+PS C:\Users\vieja\Desktop\Sistema_Ventas> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261030235534
+**********************
